@@ -59,6 +59,7 @@ To minimize risk and downtime, migration will be handled in phases
 1. Phase 2 - DNS Cutover
 1. Phase 3 - On-Prem Web Server & Application Server Retirement
 1. Phase 4 - Database Cutover
+1. Future Phases - scale out across the enterprise
 
 #### Proposed Phase 1 Interim State Conceptual Architecture
 ![XYZ Interim Architecture](images/XYZ%20Conceptual%20Arch%20-%20Proposed.png)
