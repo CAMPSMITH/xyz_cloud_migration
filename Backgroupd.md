@@ -35,5 +35,32 @@ The customer portal has integrations that are critical to the customer portal
 * SAP - SAP is the current CRM.  Important customer information is retrieved from SAP for various customer portal functions
 * ZenDesk - the customer portal offers helpdesk features, including connecting to helpdesk agents, ticketing and viewing ticket history.
 
-#### Architecture
+#### Current Conceptual Architecture
 ![XYZ Conceptual Architecture](images/XYZ%20Conceptual%20Arch.png)
+
+### Customer Portal Cloud Migration
+The proposal is to migrate XYZ's customer portal to the cloud.  Migrating the customer portal to the cloud will include minor re-architecting of the system to better fit the cloud environment, reduce operational overhead, improve system resiliency and recovery. 
+
+#### Guiding Principles
+* Maximize use of cloud vendor services, prefer these over manually installed or managed services, when possible in order to reduce development and operational effort
+* Use containers to ensure consistency between environments
+* Use CI/CD automation to reduce operational overhead associated with deployments and to eliminate downtime during deployments
+* avoid down time
+
+#### Areas requiring special migration planning
+* Database migration
+* DNS updates and cutover
+
+#### Migration Phases
+To minimize risk and downtime, migration will be handled in phases
+
+1. **Phase 1 - Web Server & Application Server Migration**
+1. Phase 2 - DNS Cutover
+1. Phase 3 - On-Prem Web Server & Application Server Retirement
+1. Phase 4 - Database Cutover
+
+#### Proposed Phase 1 Interim State Conceptual Architecture
+![XYZ Interim Architecture](images/XYZ%20Conceptual%20Arch%20-%20Proposed.png)
+![XYZ CI/CD](images/XYZ%20CI%20CD%20-%20Proposed.png)
+
+#### Phase 1 Engagement Model
