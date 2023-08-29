@@ -32,7 +32,7 @@ Based on initial discussions with XYZ, the customer portal is a traditional ente
 
 #### Key integrations
 The customer portal has integrations that are critical to the customer portal
-* SAP - SAP is the current CRM.  Important customer information is retrieved from SAP for various customer portal functions
+* SAP - SAP is the current CRM.  It is on-prem. Important customer information is retrieved from SAP for various customer portal functions
 * ZenDesk - the customer portal offers helpdesk features, including connecting to helpdesk agents, ticketing and viewing ticket history.
 
 #### Current Conceptual Architecture
@@ -64,8 +64,16 @@ To minimize risk and downtime, migration will be handled in phases
 ![XYZ Interim Architecture](images/XYZ%20Conceptual%20Arch%20-%20Proposed.png)
 ![XYZ CI/CD](images/XYZ%20CI%20CD%20-%20Proposed.png)
 Notes: 
-* deployment pipelines to include unit testing, static code analysis, and static application security testing (SAST) 
+* Deployment pipelines to include unit testing, static code analysis, and static application security testing (SAST) 
 * Depending on workflow, pipelines can either be environment specific or be configured to deploy to all environments in progression.  
 
 #### Phase 1 Engagement Model
+Phase 1 is tailored to address the pain points.
+* Containers are used to ensure consistency between environments
+* IAC and deployment automation can significantly reduce time required to provision new environments
+* Container orchestration and deployment automation can eliminate downtime during deployments
+* Integrating unit testing and static code testing into deploymet automation can improve code quality
+* Deployment automation can reduce lead times and development cycle times
 ![XYZ CI/CD](images/XYZ%20Migration%20Engagement.png)
+
+Other phases to be planned after phase 1 is completed.
