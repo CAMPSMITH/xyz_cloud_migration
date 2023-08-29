@@ -46,6 +46,7 @@ The proposal is to migrate XYZ's customer portal to the cloud.  Migrating the cu
 * Use containers to ensure consistency between environments
 * Use CI/CD automation to reduce operational overhead associated with deployments and to eliminate downtime during deployments
 * avoid down time
+* Minimize changes to the application to reduce risk and cloud migration duration
 
 #### Areas requiring special migration planning
 * Database migration
@@ -62,5 +63,9 @@ To minimize risk and downtime, migration will be handled in phases
 #### Proposed Phase 1 Interim State Conceptual Architecture
 ![XYZ Interim Architecture](images/XYZ%20Conceptual%20Arch%20-%20Proposed.png)
 ![XYZ CI/CD](images/XYZ%20CI%20CD%20-%20Proposed.png)
+Notes: 
+* deployment pipelines to include unit testing, static code analysis, and static application security testing (SAST) 
+* Depending on workflow, pipelines can either be environment specific or be configured to deploy to all environments in progression.  
 
 #### Phase 1 Engagement Model
+![XYZ CI/CD](images/XYZ%20Migration%20Engagement.png)
